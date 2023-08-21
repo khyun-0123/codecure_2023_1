@@ -1,0 +1,10 @@
+비밀번호 kernel
+
+
+실행 ./
+ls -al 전체 파일 조회
+
+
+id/pass
+admin
+admin

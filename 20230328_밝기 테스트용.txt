@@ -1,0 +1,23 @@
+from PIL import Image, ImageEnhance
+
+def lower_brightness(image_path, brightness_factor):
+    """
+    This function takes an image path and a brightness factor and returns a new image with reduced brightness.
+    The brightness factor should be a float between 0.0 (black image) and 1.0 (original brightness).
+    """
+    image = Image.open(image_path)
+    enhancer = ImageEnhance.Brightness(image)
+    new_image = enhancer.enhance(brightness_factor)
+    return new_image
+
+-----------------------------------------------------------------------------
+
+# Load the original image
+original_image = Image.open("my_image.jpg")
+
+# Reduce the brightness by 50%
+lowered_brightness_image = lower_brightness("my_image.jpg", 0.5)
+
+# Display the original and new images side-by-side
+original_image.show()
+lowered_brightness_image.show()

@@ -1,0 +1,5 @@
+git
+
+pip install git+git://github.com/jaidedai/easyocr.git
+
+
